@@ -25,5 +25,5 @@ FingerWeb dibuat menggunakan **Python 3**. Pastikan Anda telah menginstal semua 
 
 ```bash
 # Ganti <username-anda> dengan nama pengguna GitHub Anda
-git clone [https://github.com/](https://github.com/)<achmadismail173>/FingerWeb.git
-cd FingerWeb
+git clone https://github.com/achmadismail173/fingerweb.git
+cd fingerweb
