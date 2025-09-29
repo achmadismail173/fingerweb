@@ -24,7 +24,7 @@ FingerWeb is built using **Python 3**. Ensure you have all the necessary depende
 ### 1. Cloning the Repository
 
 ```bash
-git clone [https://github.com/achmadismail173/fingerweb.git](https://github.com/achmadismail173/fingerweb.git)
+git clone https://github.com/achmadismail173/fingerweb.git
 cd fingerweb
 ```
 
@@ -110,4 +110,4 @@ python3 dev.py -l targets.txt -o results.json --json --threads 5
 
 ### 🤝 Contributing
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
