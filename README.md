@@ -78,7 +78,7 @@ python3 fingerweb.py -u https://www.contoh-target.com --favicon --fav-db /path/t
 ==========================================================================
 
 --- 💻 TECHNOLOGY STACK (Backend/CMS) ------------------------------
-[ CMS/Framework ] : WordPress (6.5.4)
+[ CMS/Framework ] : Laravel (10.3)
 [ Server/Powered  ] : LiteSpeed, PHP/8.2.16
 
 --- 👣 DIGITAL FOOTPRINT --------------------------------------------
