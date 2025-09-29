@@ -1,51 +1,55 @@
-# 🕵️ FingerWeb — Web Tech Detective CLI (v1.0)
+# 🕵️ FingerWeb — Web Tech Detective CLI (v2.4)
 
-FingerWeb adalah *Command Line Interface (CLI)* yang cepat dan akurat untuk deteksi teknologi web (CMS, Framework, Infrastructure, dan JS Front-end) pada sebuah target URL. Tool ini dirancang untuk memberikan *output* yang bersih, ringkas, dan sangat informatif.
+FingerWeb is a fast and accurate **Command Line Interface (CLI)** tool for web technology detection (CMS, Frameworks, Infrastructure, and JS Front-end) on any target URL. This tool is designed to provide clean, concise, and highly informative output.
 
 ✨ **Clean Output | Powered by x1n73ct**
 
 ---
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-* **Deteksi Teknologi Multi-Layer:** Mengidentifikasi CMS, *Backend Framework* (e.g., Laravel, Django, WordPress), dan *JavaScript Framework* (e.g., React, Vue, Angular) beserta versinya.
-* **Output Paling Bersih:** Hanya menampilkan satu teknologi utama (skor tertinggi) untuk CMS/Framework, dan menampilkan semua JS Framework yang terdeteksi.
-* **Analisis Infrastruktur:** Mendeteksi *proxy* atau layanan infrastruktur populer (e.g., Cloudflare, Akamai, Varnish).
-* **Deteksi CI/CD Tersembunyi:** Menggunakan teknik *custom 404 baseline* untuk mengidentifikasi keberadaan *file/folder* CI/CD (e.g., `.github/workflows`, `.gitlab-ci.yml`).
-* **Analisis Keamanan:** Memeriksa status *Security Headers* (CSP, XFO, HSTS) dan informasi sertifikat TLS/SSL.
-* **Favicon Hashing:** Menggunakan *hash* `mmh3` untuk mengidentifikasi teknologi melalui ikon mereka.
+* **Multi-Layer Technology Detection:** Identifies CMS, Backend Frameworks (e.g., Laravel, Django, WordPress), and JavaScript Frameworks (e.g., React, Vue, Angular), along with their detected versions.
+* **Cleanest Output:** Displays only the primary technology (highest score) for CMS/Frameworks and lists all detected JS Frameworks.
+* **Infrastructure Analysis:** Detects popular proxy or infrastructure services (e.g., Cloudflare, Akamai, Varnish).
+* **Hidden CI/CD Detection:** Uses a custom **404 baseline technique** to identify the presence of CI/CD files/folders (e.g., `.github/workflows`, `.gitlab-ci.yml`).
+* **Security Analysis:** Checks the status of critical **Security Headers** (CSP, XFO, HSTS, etc.) and provides TLS/SSL certificate information.
+* **Favicon Hashing:** Uses the `mmh3` hash to identify technologies via their favicon icon.
 
 ---
 
-## ⚙️ Instalasi
+## ⚙️ Installation
 
-FingerWeb dibuat menggunakan **Python 3**. Pastikan Anda telah menginstal semua dependensi yang diperlukan.
+FingerWeb is built using **Python 3**. Ensure you have all the necessary dependencies installed.
 
-### 1. Kloning Repositori
+### 1. Cloning the Repository
 
 ```bash
-# Ganti <username-anda> dengan nama pengguna GitHub Anda
-git clone https://github.com/achmadismail173/fingerweb.git
+git clone [https://github.com/achmadismail173/fingerweb.git](https://github.com/achmadismail173/fingerweb.git)
 cd fingerweb
 ```
+
+
 ### 2. Instal Dependensi
+
+You need to have requests, colorama, mmh3, and urllib3 installed.
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## 💡 Penggunaan
+## 💡 Usage
 
-Pemindaian Tunggal
+Single Target Scan
 
-Gunakan opsi -u (atau --url) untuk memindai target tunggal.
+Use the -u (or --url) option to scan a single target. Include optional flags like --tls and --favicon for more detailed results.
 
 ```bash
 python3 dev.py -u https://www.contoh-target.com
 ```
 
-Contoh Tampilan (Output CLI)
+CLI Output Example
 
 ```bash
 ╔══════════════════════════════════════════════════════════════╗
@@ -81,10 +85,10 @@ Contoh Tampilan (Output CLI)
 ```
 
 
-Pemindaian Massal dan Output JSON
+Bulk Scanning and JSON Output
 
 ```bash
-# Memindai daftar URL dari file 'targets.txt' dan menyimpan hasilnya ke 'results.json'
+# Scan a list of URLs from 'targets.txt', output results in JSON, and use 5 threads
 python3 dev.py -l targets.txt -o results.json --json --threads 5
 ```
 
@@ -101,3 +105,7 @@ python3 dev.py -l targets.txt -o results.json --json --threads 5
 | | `--json` | Outputs the result exclusively in **JSON format** (suppresses standard CLI output). |
 | `-o` | `--output` | Saves the JSON output to a specified file path. |
 | | `--threads` | Number of concurrent threads for bulk scanning (used with `-l`). |
+
+## 🤝 Contributing
+
+This project is licensed under the MIT License.
