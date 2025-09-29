@@ -88,15 +88,16 @@ Pemindaian Massal dan Output JSON
 python3 dev.py -l targets.txt -o results.json --json --threads 5
 ```
 
-⚙️ Command Line Interface (CLI) Options
+## ⚙️ Command Line Interface (CLI) Options
 
-| Short | Flag |	Long Flag	Description |
-|---|---|---|---|
-| -u	|  --url	| Single target URL to scan (e.g., https://example.com).| 
-| -l	| --list	| File containing a list of target URLs (one URL per line).| 
-| -t	| --timeout	| Connection timeout in seconds (Default: 10).| 
-| --favicon		| Enables | favicon hashing and database lookup for deeper fingerprinting.| 
-| --tls		||  Fetches and displays TLS/SSL certificate subject and issuer information.| 
-| --json		| | Outputs the result exclusively in JSON format (suppresses standard CLI output).| 
-| -o	| --output | 	Saves the JSON output to a specified file path.| 
-| --threads ||  		Number of concurrent threads for bulk scanning (used with -l).| 
+| Short Flag | Long Flag | Description |
+| :---: | :---: | :--- |
+| `-u` | `--url` | **Single target URL** to scan (e.g., `https://example.com`). |
+| `-l` | `--list` | File containing a list of target URLs (one URL per line). |
+| `-t` | `--timeout` | Connection timeout in seconds (Default: 10). |
+| | `--favicon` | Enables **favicon hashing** and database lookup for deeper fingerprinting. |
+| | `--fav-db` | Path to the favicon database file (Default: `db_favicon.json`). |
+| `--tls` | | Fetches and displays **TLS/SSL certificate** subject and issuer information. |
+| | `--json` | Outputs the result exclusively in **JSON format** (suppresses standard CLI output). |
+| `-o` | `--output` | Saves the JSON output to a specified file path. |
+| | `--threads` | Number of concurrent threads for bulk scanning (used with `-l`). |
