@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 🕵️ FingerWeb — Web Tech Detective CLI
-Versi 2.2: JS Framework Dipisahkan | Output CMS/Framework Hanya Yang Tertinggi dan Versi.
+Versi 1.0
 """
 
 import argparse
@@ -39,7 +39,7 @@ BANNER = f"""
 """
 
 # ────────────────────────────────
-# JS Framework Signatures (Frontend - DIPISAHKAN)
+# JS Framework Signatures
 # ────────────────────────────────
 JS_FRAMEWORK_SIGNATURES = {
     "Next.js": [
@@ -75,7 +75,7 @@ JS_FRAMEWORK_SIGNATURES = {
 }
 
 # ────────────────────────────────
-# CMS / Framework signatures (Backend/Full-Stack - DIKECILKAN)
+# CMS / Framework signatures
 # ────────────────────────────────
 SIGNATURES = {
     # ----------------------------------------------------
@@ -103,7 +103,7 @@ SIGNATURES = {
     ],
 
     # ----------------------------------------------------
-    # B. Frameworks Backend & Bahasa
+    # B. Frameworks Backend
     # ----------------------------------------------------
     "Ruby on Rails": [
         ("header", r"x-powered-by: phusion passenger|server: passenger", 75),
@@ -136,7 +136,7 @@ SIGNATURES = {
     ],
 
     # ----------------------------------------------------
-    # D. E-Commerce / Toko Online
+    # D. E-Commerce
     # ----------------------------------------------------
     "Shopify": [
         ("body", r"cdn\\.shopify\\.com|shopify\\.js", 70),
@@ -177,13 +177,13 @@ SIGNATURES = {
 CICD_PATHS = [
     ".gitlab-ci.yml", ".travis.yml", "bitbucket-pipelines.yml",
     "azure-pipelines.yml", "drone.yml",
-    "jenkins/", "job/", "hudson/", # Jenkins/Hudson
+    "jenkins/", "job/", "hudson/",
     "teamcity/", ".circleci/config.yml",
-    ".github/workflows/", ".git/HEAD", ".svn/entries", # VCS
-    "build/", "target/", "dist/", # Build/Output Directories
-    ".hg/store/", # Mercurial VCS
-    "web-inf/web.xml", # Java Deployments
-    "sitemap.xml", "robots.txt", # Common files (low score, context check)
+    ".github/workflows/", ".git/HEAD", ".svn/entries",
+    "build/", "target/", "dist/",
+    ".hg/store/",
+    "web-inf/web.xml",
+    "sitemap.xml", "robots.txt",
 ]
 
 SECURITY_HEADERS = [
@@ -192,9 +192,9 @@ SECURITY_HEADERS = [
     "X-Frame-Options", 
     "X-Content-Type-Options", 
     "Referrer-Policy",
-    "Permissions-Policy", # New header
-    "Expect-CT", # New header
-    "X-XSS-Protection", # Legacy but important check
+    "Permissions-Policy",
+    "Expect-CT",
+    "X-XSS-Protection",
 ]
 
 INFRA_SIGNATURES = {
@@ -305,7 +305,7 @@ def hash_favicon(url):
 
 def get_baseline_404(url):
     try:
-        test_url = url.rstrip("/") + "/__this_should_not_exist_12345"
+        test_url = url.rstrip("/") + "/__alah_mbuh_lah_cok_pusingikipiye_validasine"
         r = requests.get(test_url, timeout=DEFAULT_TIMEOUT, verify=False, allow_redirects=True)
         return hashlib.md5(r.text.encode(errors='ignore')).hexdigest(), len(r.text)
     except:
@@ -393,7 +393,7 @@ def scan_target(url, args, fav_db):
     
     SEP = "=" * 74
     def print_line(label, value, color=Fore.GREEN):
-        # Memastikan label memiliki lebar 15 karakter untuk alignment yang konsisten
+        
         if not args.json and not args.output:
             print(f"{color}[ {label:<15} ]{Style.RESET_ALL} : {value}")
 
@@ -460,19 +460,19 @@ def scan_target(url, args, fav_db):
 
 
     # ---------------------------
-    # 3. DIGITAL FOOTPRINT (NEW JS FRAMEWORK SECTION)
+    # 3. DIGITAL FOOTPRINT
     # ---------------------------
     if not args.json and not args.output:
         print(f"\n{Fore.CYAN}--- 👣 DIGITAL FOOTPRINT {'-'*44}{Style.RESET_ALL}")
     results["footprint"] = {}
 
-    # JS Frameworks Detection (NEW CATEGORY)
+    # JS Frameworks Detection
     js_frameworks = detect_js_frameworks(url, resp)
     # Menyesuaikan struktur data untuk JSON output
     results["footprint"]["js_frameworks"] = {name: data['score'] for name, data in js_frameworks.items()}
     
     if js_frameworks:
-        # Sortir berdasarkan skor (tetap tampilkan semua, tapi urutan terbaik)
+        # Sortir berdasarkan skor
         sorted_js = sorted(js_frameworks.items(), key=lambda item: item[1]['score'], reverse=True)
         
         # LOGIKA FINAL: Tampilkan semua JS Frameworks, Tanpa Skor, tampilkan Versi jika ada
@@ -635,4 +635,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
