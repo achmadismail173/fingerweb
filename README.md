@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ## 💡 Usage
 
-Single Target Scan
+**Single Target Scan**
 
 Use the `-u` (or `--url`) option to scan a single target. Include optional flags like `--tls` and `--favicon` for more detailed results.
 
@@ -50,7 +50,7 @@ python3 fingerweb.py -u https://www.contoh-target.com
 ```
 
 
-How to Use Favicon Hashing (`--favicon`) 🔎
+**How to Use Favicon Hashing** (`--favicon`) 🔎
 
 Favicon Hashing allows FingerWeb to detect technologies even if they hide version numbers or metadata, by checking the site's unique default icon fingerprint.
 
@@ -65,7 +65,7 @@ python3 fingerweb.py -u https://www.contoh-target.com --favicon --fav-db /path/t
 ```
 
 
-CLI Output Example
+**CLI Output Example**
 
 ```bash
 ╔══════════════════════════════════════════════════════════════╗
@@ -100,7 +100,7 @@ CLI Output Example
 ```
 
 
-Bulk Scanning and JSON Output
+**Bulk Scanning and JSON Output**
 
 ```bash
 # Scan a list of URLs from 'targets.txt', output results in JSON, and use 5 threads
