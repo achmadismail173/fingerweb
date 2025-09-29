@@ -104,7 +104,7 @@ python3 fingerweb.py -u https://www.contoh-target.com --favicon --fav-db /path/t
 
 ```bash
 # Scan a list of URLs from 'targets.txt', output results in JSON, and use 5 threads
-python3 dev.py -l targets.txt -o results.json --json --threads 5
+python3 fingerweb.py -l targets.txt -o results.json --json --threads 5
 ```
 
 ---
