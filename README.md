@@ -1,4 +1,4 @@
-# 🕵️ FingerWeb — Web Tech Detective CLI (v2.4)
+# 🕵️ FingerWeb — Web Tech Detective CLI (v1.0)
 
 FingerWeb is a fast and accurate **Command Line Interface (CLI)** tool for web technology detection (CMS, Frameworks, Infrastructure, and JS Front-end) on any target URL. This tool is designed to provide clean, concise, and highly informative output.
 
