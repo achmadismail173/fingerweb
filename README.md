@@ -68,7 +68,6 @@ CLI Output Example
 --- 👣 DIGITAL FOOTPRINT --------------------------------------------
 [ JS Frameworks   ] : Angular (17.2), React
 [ Infrastructure  ] : Cloudflare
-[ Favicon Hash    ] : 12a34b5c (Match: WordPress)
 [ 404 Baseline    ] : 5f6e7d8c... (Len: 4200 bytes)
 [ CI/CD           ] : .github/workflows/
 
