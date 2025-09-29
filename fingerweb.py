@@ -433,7 +433,6 @@ def scan_target(url, args, fav_db):
         results["tech_stack"]["primary_tech"] = primary_tech_name
         results["tech_stack"]["primary_score"] = primary_tech_data['score']
         
-        # LOGIKA FINAL: Hanya tampilkan nama teknologi tertinggi. Tambahkan versi jika ada. TANPA (+ lainnya) dan TANPA SKOR.
         output_name = primary_tech_name
         if primary_tech_data['version']:
             output_name += f" ({primary_tech_data['version']})"
@@ -475,7 +474,6 @@ def scan_target(url, args, fav_db):
         # Sortir berdasarkan skor
         sorted_js = sorted(js_frameworks.items(), key=lambda item: item[1]['score'], reverse=True)
         
-        # LOGIKA FINAL: Tampilkan semua JS Frameworks, Tanpa Skor, tampilkan Versi jika ada
         all_js_names = []
         for name, data in sorted_js:
             display_name = name
@@ -637,3 +635,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
