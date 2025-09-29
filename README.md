@@ -46,15 +46,15 @@ Single Target Scan
 Use the -u (or --url) option to scan a single target. Include optional flags like --tls and --favicon for more detailed results.
 
 ```bash
-python3 dev.py -u https://www.contoh-target.com
+python3 fingerweb.py -u https://www.contoh-target.com
 ```
 
 CLI Output Example
 
 ```bash
 ╔══════════════════════════════════════════════════════════════╗
-║   🕵️ FingerWeb — Web Tech Detective CLI (v2.3)              ║
-║   ✨ Clean Output | Powered by x1n73ct                      ║
+║   🕵️ FingerWeb — Web Tech Detective CLI (v1.0)               ║
+║   ✨ Powered by X1N73CT                                      ║
 ╚══════════════════════════════════════════════════════════════╝
 
 ==========================================================================
