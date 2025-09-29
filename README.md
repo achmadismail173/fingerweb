@@ -82,7 +82,7 @@ python3 fingerweb.py -u https://www.contoh-target.com --favicon --fav-db /path/t
 [ Server/Powered  ] : LiteSpeed, PHP/8.2.16
 
 --- 👣 DIGITAL FOOTPRINT --------------------------------------------
-[ JS Frameworks   ] : Angular (17.2), React
+[ JS Frameworks   ] : Angular (17.2)
 [ Infrastructure  ] : Cloudflare
 [ 404 Baseline    ] : 5f6e7d8c... (Len: 4200 bytes)
 [ CI/CD           ] : .github/workflows/
