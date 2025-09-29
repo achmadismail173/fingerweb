@@ -2,7 +2,7 @@
 
 FingerWeb is a fast and accurate **Command Line Interface (CLI)** tool for web technology detection (CMS, Frameworks, Infrastructure, and JS Front-end) on any target URL. This tool is designed to provide clean, concise, and highly informative output.
 
-✨ **Clean Output | Powered by x1n73ct**
+✨ **Clean Output | Powered by X'1N73CT**
 
 ---
 
@@ -54,7 +54,7 @@ CLI Output Example
 ```bash
 ╔══════════════════════════════════════════════════════════════╗
 ║   🕵️ FingerWeb — Web Tech Detective CLI (v1.0)               ║
-║   ✨ Powered by X1N73CT                                      ║
+║   ✨ Powered by X'1N73CT                                     ║
 ╚══════════════════════════════════════════════════════════════╝
 
 ==========================================================================
