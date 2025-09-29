@@ -92,7 +92,9 @@ Bulk Scanning and JSON Output
 python3 dev.py -l targets.txt -o results.json --json --threads 5
 ```
 
-## ⚙️ Command Line Interface (CLI) Options
+---
+
+### ⚙️ Command Line Interface (CLI) Options
 
 | Short Flag | Long Flag | Description |
 | :---: | :---: | :--- |
@@ -106,6 +108,6 @@ python3 dev.py -l targets.txt -o results.json --json --threads 5
 | `-o` | `--output` | Saves the JSON output to a specified file path. |
 | | `--threads` | Number of concurrent threads for bulk scanning (used with `-l`). |
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 This project is licensed under the MIT License.
