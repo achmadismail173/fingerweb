@@ -91,6 +91,7 @@ python3 dev.py -l targets.txt -o results.json --json --threads 5
 ⚙️ Command Line Interface (CLI) Options
 
 | Short | Flag |	Long Flag	Description |
+|---|---|---|---|
 | -u	|  --url	| Single target URL to scan (e.g., https://example.com).| 
 | -l	| --list	| File containing a list of target URLs (one URL per line).| 
 | -t	| --timeout	| Connection timeout in seconds (Default: 10).| 
