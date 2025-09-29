@@ -51,15 +51,19 @@ python3 fingerweb.py -u https://www.contoh-target.com
 
 
 How to Use Favicon Hashing (`--favicon`) 🔎
+
 Favicon Hashing allows FingerWeb to detect technologies even if they hide version numbers or metadata, by checking the site's unique default icon fingerprint.
 
   1. **Enable Feature**: Always include the `--favicon` flag when running the scan.
+  
   2. **Database Path (Optional)**: By default, FingerWeb looks for the database in `./db_favicon.json`. If your database file is elsewhere, specify the path using `--fav-db`.
+
 
 ```bash
 # Example using a custom database path
 python3 fingerweb.py -u https://www.contoh-target.com --favicon --fav-db /path/to/my/custom_db.json
 ```
+
 
 CLI Output Example
 
